@@ -10,14 +10,20 @@ Você deve exibir os pares em ordem crescente e na sequência os ímpares em ord
 
 
 let totalItems =[1,2,3,4];
-for (var i = 0; i < totalItems.length; i++) {
-    let itens = totalItems[i];
-    if(itens % 2 !=0){
-        let itensImpares = itens.sort();
-    }else{
-        let itensPares = itens.sort();
-    }
-        
-    console.log(itensImpares) 
-    console.log(itensPares) 
+
+var pares = function(item) {
+    return !(item % 2) 
 }
+
+var impares = function(item) {
+    return (item % 2)
+}
+
+var numerosPar = totalItems.filter(pares);
+var numerosImpar = totalItems.filter(impares);
+
+console.log(numerosPar);
+
+console.log(numerosImpar);
+
+
