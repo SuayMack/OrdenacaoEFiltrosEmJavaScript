@@ -11,19 +11,15 @@ Você deve exibir os pares em ordem crescente e na sequência os ímpares em ord
 
 let totalItems =[1,2,3,4];
 
-var pares = function(item) {
-    return !(item % 2) 
-}
+var pares = item => !(item % 2)
 
-var impares = function(item) {
-    return (item % 2)
-}
+var impares = item => item % 2
 
 var numerosPar = totalItems.filter(pares);
 var numerosImpar = totalItems.filter(impares);
+var itensUnicos = numerosPar + numerosImpar
+let resposta = [...itensUnicos].join(" ");
 
-console.log(numerosPar);
-
-console.log(numerosImpar);
+console.log(resposta);
 
 
